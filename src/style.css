@@ -1,0 +1,143 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-blue: hsl(225, 32%, 9%);
+  --light-blue: hsl(227, 39%, 17%);
+  --toDo--Bg: hsl(197, 50%, 91%);
+  --btn--add: hsl(207, 61%, 50%);
+  --checkbox--selectedBg: hsl(122, 60%, 63%);
+  --checkbox--removeBg: hsl(0, 66%, 45%);
+  --checkbox--removeBg-hover: hsl(0, 68%, 60%);
+}
+
+#root {
+  height: 100%;
+  display: flex;
+  width: 80%;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(0deg, var(--dark-blue), var(--light-blue));
+}
+
+.container {
+  display: flex;
+  width: 30rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  background-color: var(--toDo--Bg);
+  filter: drop-shadow(0px 5px 8px hsl(225, 37%, 45%));
+  border-radius: 2px;
+}
+
+.wrapper {
+  width: 100%;
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.header {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
+
+.header--title {
+  font-weight: 400;
+}
+
+.tasks--items {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.task--item {
+  flex: 1;
+  background: white;
+  border: 1px solid hsl(0deg 6% 79%);
+  padding: 0.5rem 0.8rem;
+  font-family: "Open Sans", sans-serif;
+  word-break: break-all;
+}
+
+.task--wrapper {
+  display: flex;
+  min-height: 2.5rem;
+}
+
+.btn--remove,
+.btn--select {
+  font-size: 1.2rem;
+  border: none;
+  padding: 0.4rem 0.8rem;
+}
+
+.btn--remove {
+  background-color: var(--checkbox--removeBg);
+  color: white;
+  cursor: pointer;
+  border-radius: 0 3px 3px 0;
+  transition: background-color 0.3s ease;
+}
+
+.btn--remove:hover {
+  background-color: var(--checkbox--removeBg-hover);
+  color: black;
+}
+
+.btn--select {
+  cursor: pointer;
+  border-radius: 3px 0 0 3px;
+  border: 1px solid hsl(0deg 6% 79%);
+}
+
+.btn--select-active {
+  background-color: var(--checkbox--selectedBg);
+  color: white;
+}
+
+.btn--add {
+  border-radius: 0 4px 4px 0;
+  border: none;
+  background: var(--btn--add);
+  padding: 0.6rem;
+  color: hsl(0deg 0% 100%);
+  font-weight: 400;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.btn--add:hover {
+  background-color: var(--light-blue);
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+}
+
+.form--input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  flex: 1;
+  border-radius: 2px 0 0 2px;
+  border: 1px solid hsl(0deg 6% 79%);
+}
